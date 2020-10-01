@@ -1,5 +1,5 @@
 // retreiving data from samples
-d3.json("/data/samples.json").then((Raw_Data) => {
+d3.json("./data/samples.json").then((Raw_Data) => {
     window.Raw_Data = Raw_Data;
     console.log(Raw_Data);
     var data = Raw_Data;

@@ -1,8 +1,8 @@
 // retreiving data from samples
-d3.json("/data/samples.json").then((bbData) => {
-    window.bbData = bbData;
-    console.log(bbData);
-    var data = bbData;
+d3.json("/data/samples.json").then((Raw_Data) => {
+    window.Raw_Data = Raw_Data;
+    console.log(Raw_Data);
+    var data = Raw_Data;
 
 // Add ID#s to dropdown menu
 var idList = data.names;
@@ -98,8 +98,7 @@ for (var i = 0; i < idList.length; i++) {
      showlegend: false,
      height: 600,
      width: 930
-   }
-
+   };
    // Render the plot to the div tag with id "bubble-plot"
    Plotly.newPlot("bubble", bubbleData, layout)
 
